@@ -67,3 +67,38 @@ This Jupyter notebook implements a robust ETL (Extract, Transform, Load) pipelin
 3. **Structural**
    - Standardized `Date` column to `YYYY-MM-DD` format using `pd.to_datetime`
    - Converted `School DBN` to uppercase for consistency
+
+### LAB 5: LOADING
+This lab focuses on the Load phase of the ETL (Extract, Transform, Load) process. It involves moving clean, transformed attendance data into structured storage formats for analysis and downstream use.
+
+ Objectives
+Load both the full and incremental datasets.
+
+Store the data in efficient, structured formats using Parquet.
+
+Automate the loading process using a Jupyter notebook (etl_load.ipynb).
+
+Validate the load by previewing a sample of each dataset.
+
+ Datasets Used
+Description	File Name	Notes
+Full Transformed Dataset	school_attendance.csv	Generated attendance data
+Incremental Extract	latest_extracted_records.csv	Extracted using checkpointing
+
+ Output Format and Storage
+Both datasets are loaded and saved in the Apache Parquet format — a compressed, columnar file format optimized for analytical workloads.
+
+Output File	Description
+loaded_data/full_data.parquet	Parquet version of full dataset
+loaded_data/incremental_data.parquet	Parquet version of incremental
+
+ Tools & Technologies Used
+Python with pandas
+
+Jupyter Notebook (etl_load.ipynb)
+
+Parquet format via pandas.to_parquet()
+
+Local file-based storage
+
+
